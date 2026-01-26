@@ -67,7 +67,7 @@ class GoGame:
             nx, ny = x + dx, y + dy
             if self.onBoard(nx, ny):
                 if self.board[ny][nx] == opponent:
-                    group, liberties = self.get_group(nx, ny, self.board)
+                    group, liberties = self.getGroup(nx, ny, self.board)
                     if liberties == 0:
                         captured_groups.append(group)
 
