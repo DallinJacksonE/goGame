@@ -1,0 +1,75 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+}
+
+.main-title {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.menu-options {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-card {
+  display: block;
+  width: 200px;
+  padding: 30px;
+  text-decoration: none;
+  color: inherit;
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.menu-card h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.menu-card p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Hover Effect */
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: #DCB35C;
+  /* The Go Board color */
+  background-color: #fffdf5;
+}
+
+/* Optional styling for unimplemented features */
+.coming-soon {
+  opacity: 0.6;
+  position: relative;
+}
+
+.coming-soon:hover::after {
+  content: "(Coming Soon)";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  color: #DCB35C;
+  font-weight: bold;
+  font-size: 0.8rem;
+}

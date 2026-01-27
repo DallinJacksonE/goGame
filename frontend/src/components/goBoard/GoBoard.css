@@ -1,0 +1,103 @@
+.go-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.info-panel {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.board {
+  display: grid;
+  /* 9x9 grid */
+  grid-template-columns: repeat(9, 50px);
+  grid-template-rows: repeat(9, 50px);
+  background-color: #DCB35C;
+  padding: 25px;
+  border: 2px solid #555;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cell {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* Grid lines */
+.cell::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #000;
+}
+
+.cell::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background: #000;
+}
+
+/* Stones */
+.stone {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 2;
+  /* Above lines */
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.stone.black {
+  background: radial-gradient(circle at 30% 30%, #444, #000);
+}
+
+.stone.white {
+  background: radial-gradient(circle at 30% 30%, #fff, #ddd);
+}
+
+/* Hover Ghost Stone */
+.ghost {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.cell:hover .ghost {
+  display: block;
+}
+
+.error-msg {
+  color: red;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.reset-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
