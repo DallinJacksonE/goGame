@@ -6,16 +6,27 @@ A game I really love but haven't played much. I thought this would be a fun way 
 
 .
 ├── frontend
+
 │   ├── index.html
+
 │   ├── public
+
 │   ├── README.md
+
 │   ├── src
+
 │   │   ├── assets
+
 │   │   ├── components
+
 ├── README.md
+
 └── service
+
     ├── app.py
+
     ├── db
+
     └── games
 
 The frontend folder is a React website. The pages can be found in components. The service folder is the backend, `app.py` lists the api calls and server logic. Database code is in the `/db` directory, and different game object types are in the `/games` directory.
