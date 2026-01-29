@@ -15,7 +15,7 @@ export default function GoBoard() {
 
   const fetchGameState = async () => {
     try {
-      const res = await fetch('/api/state');
+      const res = await fetch('/api/stateCoop');
       const data = await res.json();
       updateLocalState(data);
     } catch (err) {
@@ -36,7 +36,7 @@ export default function GoBoard() {
 
   const handleMove = async (x, y) => {
     try {
-      const res = await fetch('/api/move', {
+      const res = await fetch('/api/moveCoop', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ x, y })
@@ -57,7 +57,7 @@ export default function GoBoard() {
 
   const handleReset = async () => {
     try {
-      const res = await fetch('/api/reset', { method: 'POST' });
+      const res = await fetch('/api/resetCoop', { method: 'POST' });
       const data = await res.json();
       updateLocalState(data);
       setMessage('');

@@ -100,7 +100,7 @@ class GoGameCoop:
         self.currentTurn = opponent
         return True, "Move successful"
 
-    def to_dict(self):
+    def toDict(self):
         return {
             'board': self.board,
             'currentTurn': self.currentTurn,
