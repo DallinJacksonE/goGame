@@ -2,7 +2,7 @@
 
 A game I really love but haven't played much. I thought this would be a fun way to try out using python as a backend.
 
-The rules for play can be found here: ![online-go.com/learn-to-play-go](https://online-go.com/learn-to-play-go)
+The rules for play can be found here: [online-go.com/learn-to-play-go](https://online-go.com/learn-to-play-go)
 
 ## Development
 
